@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int choice=0;
+	int a=0;
+	int b=1;
+	int c=0;
+	int i=0;
+	
+	printf("Please input how many terms of the fibonacii sequence you would like displayed \n ");
+	scanf("%d",&choice);
+	
+	if (choice>0)
+	{
+	
+		printf("1");
+		
+		for (i=1;i<choice;i++)
+		{
+			c=a+b;
+			printf(", %d",c);
+			a=b;
+			b=c;
+		}
+	}
+	else
+	{
+		printf("You did not select a valid number of terms to display \n");
+	}
+system("pause");
+}
